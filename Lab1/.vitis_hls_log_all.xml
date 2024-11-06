@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixMultiplication' (loop 'VITIS_LOOP_33_1_VITIS_LOOP_34_2'): Unable to schedule 'load' operation ('A_load_59', MATRIX_MULT.c:33) on array 'A' due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array 'A'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Lab1" solutionName="solution1" date="2024-11-06T12:43:14.289+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixMultiplication' (loop 'VITIS_LOOP_33_1_VITIS_LOOP_34_2'): Unable to schedule 'load' operation ('A_load_43', MATRIX_MULT.c:33) on array 'A' due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array 'A'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Lab1" solutionName="solution1" date="2024-11-06T12:43:13.754+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixMultiplication' (loop 'VITIS_LOOP_33_1_VITIS_LOOP_34_2'): Unable to schedule 'load' operation ('A_load_11', MATRIX_MULT.c:33) on array 'A' due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array 'A'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Lab1" solutionName="solution1" date="2024-11-06T12:43:13.490+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixMultiplication' (loop 'VITIS_LOOP_33_1_VITIS_LOOP_34_2'): Unable to schedule 'load' operation ('A_load_14', MATRIX_MULT.c:33) on array 'A' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'A'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Lab1" solutionName="solution1" date="2024-11-06T12:43:13.320+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixMultiplication' (loop 'VITIS_LOOP_33_1_VITIS_LOOP_34_2'): Unable to schedule 'load' operation ('A_load_10', MATRIX_MULT.c:33) on array 'A' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'A'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Lab1" solutionName="solution1" date="2024-11-06T12:43:12.983+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixMultiplication' (loop 'VITIS_LOOP_33_1_VITIS_LOOP_34_2'): Unable to schedule 'load' operation ('A_load_6', MATRIX_MULT.c:33) on array 'A' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'A'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Lab1" solutionName="solution1" date="2024-11-06T12:43:12.884+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixMultiplication' (loop 'VITIS_LOOP_33_1_VITIS_LOOP_34_2'): Unable to schedule 'load' operation ('A_load_1', MATRIX_MULT.c:33) on array 'A' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'A'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Lab1" solutionName="solution1" date="2024-11-06T12:43:12.810+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

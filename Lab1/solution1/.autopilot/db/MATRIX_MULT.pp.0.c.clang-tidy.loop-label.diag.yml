@@ -1,0 +1,67 @@
+---
+MainSourceFile:  'C:/Users/PX/AppData/Roaming/Xilinx/Vitis/Lab1/solution1/.autopilot/db/MATRIX_MULT.pp.0.c'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_17_1:  '
+    FileOffset:      17
+    FilePath:        MATRIX_MULT.c
+    Replacements:    
+      - FilePath:        'C:\Users\PX\AppData\Roaming\Xilinx\Vitis\Lab1\solution1\.autopilot\db\MATRIX_MULT.pp.0.c'
+        Offset:          86119
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_17_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_18_2:  '
+    FileOffset:      18
+    FilePath:        MATRIX_MULT.c
+    Replacements:    
+      - FilePath:        'C:\Users\PX\AppData\Roaming\Xilinx\Vitis\Lab1\solution1\.autopilot\db\MATRIX_MULT.pp.0.c'
+        Offset:          86153
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_18_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_25_1:  '
+    FileOffset:      25
+    FilePath:        MATRIX_MULT.c
+    Replacements:    
+      - FilePath:        'C:\Users\PX\AppData\Roaming\Xilinx\Vitis\Lab1\solution1\.autopilot\db\MATRIX_MULT.pp.0.c'
+        Offset:          86284
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_25_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_26_2:  '
+    FileOffset:      26
+    FilePath:        MATRIX_MULT.c
+    Replacements:    
+      - FilePath:        'C:\Users\PX\AppData\Roaming\Xilinx\Vitis\Lab1\solution1\.autopilot\db\MATRIX_MULT.pp.0.c'
+        Offset:          86318
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_26_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_33_1:  '
+    FileOffset:      33
+    FilePath:        MATRIX_MULT.c
+    Replacements:    
+      - FilePath:        'C:\Users\PX\AppData\Roaming\Xilinx\Vitis\Lab1\solution1\.autopilot\db\MATRIX_MULT.pp.0.c'
+        Offset:          86876
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_33_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_34_2:  '
+    FileOffset:      34
+    FilePath:        MATRIX_MULT.c
+    Replacements:    
+      - FilePath:        'C:\Users\PX\AppData\Roaming\Xilinx\Vitis\Lab1\solution1\.autopilot\db\MATRIX_MULT.pp.0.c'
+        Offset:          86910
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_34_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_36_3:  '
+    FileOffset:      36
+    FilePath:        MATRIX_MULT.c
+    Replacements:    
+      - FilePath:        'C:\Users\PX\AppData\Roaming\Xilinx\Vitis\Lab1\solution1\.autopilot\db\MATRIX_MULT.pp.0.c'
+        Offset:          86962
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_36_3: '
+...
