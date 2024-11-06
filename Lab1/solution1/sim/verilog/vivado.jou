@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Nov  6 13:13:48 2024
+# Process ID: 20048
+# Current directory: C:/Users/PX/AppData/Roaming/Xilinx/Vitis/Lab1/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: C:/Users/PX/AppData/Roaming/Xilinx/Vitis/Lab1/solution1/sim/verilog/vivado.log
+# Journal file: C:/Users/PX/AppData/Roaming/Xilinx/Vitis/Lab1/solution1/sim/verilog\vivado.jou
+# Running On: DESKTOP-AP48FCV, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 4, Host memory: 8415 MB
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+open_wave_config C:/Users/PX/AppData/Roaming/Xilinx/Vitis/Lab1/solution1/sim/verilog/matrixMultiplication.wcfg
+save_wave_config {C:/Users/PX/AppData/Roaming/Xilinx/Vitis/Lab1/solution1/sim/verilog/matrixMultiplication.wcfg}
+save_wave_config {C:/Users/PX/AppData/Roaming/Xilinx/Vitis/Lab1/solution1/sim/verilog/matrixMultiplication.wcfg}

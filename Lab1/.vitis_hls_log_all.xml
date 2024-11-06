@@ -20,7 +20,9 @@
         <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixMultiplication' (loop 'VITIS_LOOP_33_1_VITIS_LOOP_34_2'): Unable to schedule 'load' operation ('A_load_6', MATRIX_MULT.c:33) on array 'A' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'A'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Lab1" solutionName="solution1" date="2024-11-06T12:43:12.884+0200" type="Warning"/>
         <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixMultiplication' (loop 'VITIS_LOOP_33_1_VITIS_LOOP_34_2'): Unable to schedule 'load' operation ('A_load_1', MATRIX_MULT.c:33) on array 'A' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'A'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html" projectName="Lab1" solutionName="solution1" date="2024-11-06T12:43:12.810+0200" type="Warning"/>
       </synLog>
-      <simLog/>
+      <simLog>
+        <logs message="WARNING: [HLS 200-626] This design is unable to schedule all read ports in the first II cycle. The RTL testbench may treat the design as non-pipelined" projectName="Lab1" solutionName="solution1" date="2024-11-06T13:11:58.175+0200" type="Warning"/>
+      </simLog>
       <mgLog/>
       <packageLog/>
       <csimLog/>

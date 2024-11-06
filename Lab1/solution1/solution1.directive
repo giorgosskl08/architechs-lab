@@ -5,11 +5,6 @@
                 <option name="name" value="matrixMultiplication"/>
             </pragma>
         </directive>
-        <directive functionName="matrixMultiplication" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="matrixMultiplication"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

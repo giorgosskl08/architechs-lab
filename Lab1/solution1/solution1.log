@@ -331,3 +331,31 @@ INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT s
 INFO: [HLS 200-789] **** Estimated Fmax: 181.39 MHz
 INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 11 seconds. CPU system time: 2 seconds. Elapsed time: 34.274 seconds; current allocated memory: 77.359 MB.
 INFO: [HLS 200-112] Total CPU user time: 13 seconds. Total CPU system time: 3 seconds. Total elapsed time: 47.581 seconds; peak allocated memory: 170.984 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu200-fsgd2104-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu200-fsgd2104-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source ./Lab1/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixMultiplication matrixMultiplication 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level port 
+WARNING: [HLS 200-626] This design is unable to schedule all read ports in the first II cycle. The RTL testbench may treat the design as non-pipelined
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 72.714 seconds; current allocated memory: 5.449 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 87.809 seconds; peak allocated memory: 100.348 MB.
