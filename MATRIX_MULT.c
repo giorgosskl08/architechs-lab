@@ -13,29 +13,17 @@
 #define N (1 <<  LN)
 #define P (1 <<  LP)
 
-void initializeMatrixA(uint8_t A[N][M]){
-	for (int i=0; i<N; i++){
-		for (int j=0; j<M; j++){
-			A[i][j] = rand() % (MAX_VAL + 1);
-		}
-	}
-}
-
-void initializeMatrixB(uint8_t B[M][P]){
-	for (int i=0; i<M; i++){
-		for (int j=0; j<P; j++){
-			B[i][j] = rand() % (MAX_VAL + 1);
-		}
-	}
-}
-
-void matrixMultiplication(uint8_t A[N][M], uint8_t B[M][P], uint32_t AB[N][P]){
-	for (int i=0; i<N; i++){
-		for (int j=0; j<P; j++){
-			AB[i][j] = 0;
-			for (int k=1; k<M; k++){
-				AB[i][j] += A[i][k] * B[k][j];
+void matrixMultiplication(int A[N*M], int B[M*P], int AB[N*P]) {
+	#pragma HLS ARRAY_PARTITION variable=A type=cyclic factor=M
+    #pragma HLS ARRAY_PARTITION variable=B type=cyclic factor=M
+    #pragma HLS ARRAY_PARTITION variable=AB type=cyclic factor=M
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < P; j++) {
+				AB[(i * P) + j] = 0;
+				#pragma HLS UNROLL
+				for (int k = 0; k < M; k++) {
+					AB[(i * P) + j]  += A[(i * M) + k] * B[(k * P) + j];
+				}
 			}
 		}
 	}
-}

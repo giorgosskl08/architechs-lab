@@ -9,32 +9,42 @@
 #define LN 6
 #define LP 6
 
-#define M (1 <<  LM)
-#define N (1 <<  LN)
-#define P (1 <<  LP)
+#define M (1 << LM)
+#define N (1 << LN)
+#define P (1 << LP)
 
-void initializeMatrixA(uint8_t A[N][M]);
-void initializeMatrixB(uint8_t B[M][P]);
-void matrixMultiplication(uint8_t A[N][M], uint8_t B[M][P], uint32_t AB[N][P]);
+void matrixMultiplication(int A[N * M], int B[M * P], int AB[N * P]);
 
-int main()
-{
-    uint8_t A[N][M] = {0};
-    uint8_t B[M][P] = {0};
-    uint32_t AB[N][P] = {0};
+int main() {
+    int A[N * M] = {0};
+    int B[M * P] = {0};
+    int AB[N * P] = {0};
+    int i, j, k;
 
     srand(time(0));
 
-    initializeMatrixA(A);
-    initializeMatrixB(B);
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < M; j++) {
+            A[i * M + j] = rand() % (MAX_VAL + 1);
+        }
+    }
+
+    for (i = 0; i < M; i++) {
+        for (j = 0; j < P; j++) {
+            B[i * P + j] = rand() % (MAX_VAL + 1);
+        }
+    }
+
     matrixMultiplication(A, B, AB);
 
-    for (int i = 0; i < N; i++) {
-            for (int j = 0; j < P; j++) {
-                printf("%u ", AB[i][j]);
-            }
-            printf("\n");
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < P; j++) {
+            printf("%d ", AB[i * P + j]);
         }
-    printf("Test passed");
+        printf("\n");
+    }
+
+    printf("Test passed\n");
+
     return 0;
 }
