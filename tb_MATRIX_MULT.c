@@ -15,11 +15,23 @@
 
 void matrixMultiplication(int A[N * M], int B[M * P], int AB[N * P]);
 
+void softwareMatrixMultiplication(int A[N * M], int B[M * P], int AB_sw[N * P]) {
+			for (int i = 0; i < N; i++) {
+				for (int j = 0; j < P; j++) {
+					AB_sw[(i * P) + j] = 0;
+					for (int k = 0; k < M; k++) {
+						AB_sw[(i * P) + j]  += A[(i * M) + k] * B[(k * P) + j];
+					}
+				}
+			}
+		}
+
 int main() {
-    int A[N * M] = {0};
-    int B[M * P] = {0};
-    int AB[N * P] = {0};
-    int i, j, k;
+    int A[N * M];
+    int B[M * P];
+    int AB_hw[N * P] = {0};
+    int AB_sw[N * P] = {0};
+    int i, j;
 
     srand(time(0));
 
@@ -35,16 +47,25 @@ int main() {
         }
     }
 
-    matrixMultiplication(A, B, AB);
+    softwareMatrixMultiplication(A, B, AB_sw);
 
+    matrixMultiplication(A, B, AB_hw);
+
+    int test_passed = 1;
     for (i = 0; i < N; i++) {
         for (j = 0; j < P; j++) {
-            printf("%d ", AB[i * P + j]);
+            if (AB_sw[i * P + j] != AB_hw[i * P + j]) {
+                test_passed = 0;
+                printf("Mismatch at [%d][%d]: AB_sw = %d, AB_hw = %d\n", i, j, AB_sw[i * P + j], AB_hw[i * P + j]);
+            }
         }
-        printf("\n");
     }
 
-    printf("Test passed\n");
+    if (test_passed) {
+        printf("Test passed\n");
+    } else {
+        printf("Test failed\n");
+    }
 
     return 0;
 }
