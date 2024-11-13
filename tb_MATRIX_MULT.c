@@ -54,6 +54,8 @@ int main() {
     int test_passed = 1;
     for (i = 0; i < N; i++) {
         for (j = 0; j < P; j++) {
+			AB_sw[(i * P) + j] = 0;
+			AB_hw[(i * P) + j] = 0;
             if (AB_sw[i * P + j] != AB_hw[i * P + j]) {
                 test_passed = 0;
                 printf("Mismatch at [%d][%d]: AB_sw = %d, AB_hw = %d\n", i, j, AB_sw[i * P + j], AB_hw[i * P + j]);
