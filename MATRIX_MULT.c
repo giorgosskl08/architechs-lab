@@ -9,14 +9,14 @@
 #define LN 6
 #define LP 6
 
-#define M (1 <<  LM)
-#define N (1 <<  LN)
-#define P (1 <<  LP)
+#define M (1 << LM)
+#define N (1 << LN)
+#define P (1 << LP)
 
-void matrixMultiplication(int A[N*M], int B[M*P], int AB[N*P]) {
-	#pragma HLS ARRAY_PARTITION variable=A type=cyclic factor=M
-    #pragma HLS ARRAY_PARTITION variable=B type=cyclic factor=M
-    #pragma HLS ARRAY_PARTITION variable=AB type=cyclic factor=M
+void matrixMultiplication(uint8_t A[N*M], uint8_t B[M*P], uint32_t AB[N*P]) {
+	#pragma HLS ARRAY_PARTITION variable=A type=cyclic factor=M dim=0
+    #pragma HLS ARRAY_PARTITION variable=B type=cyclic factor=M dim=1
+    #pragma HLS ARRAY_PARTITION variable=AB complete
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < P; j++) {
 				AB[(i * P) + j] = 0;

@@ -13,9 +13,9 @@
 #define N (1 << LN)
 #define P (1 << LP)
 
-void matrixMultiplication(int A[N * M], int B[M * P], int AB[N * P]);
+void matrixMultiplication(uint8_t A[N * M], uint8_t B[M * P], uint32_t AB[N * P]);
 
-void softwareMatrixMultiplication(int A[N * M], int B[M * P], int AB_sw[N * P]) {
+void softwareMatrixMultiplication(uint8_t A[N * M], uint8_t B[M * P], uint32_t AB_sw[N * P]) {
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < P; j++) {
 					AB_sw[(i * P) + j] = 0;
@@ -27,13 +27,13 @@ void softwareMatrixMultiplication(int A[N * M], int B[M * P], int AB_sw[N * P]) 
 		}
 
 int main() {
-    int A[N * M];
-    int B[M * P];
-    int AB_hw[N * P] = {0};
-    int AB_sw[N * P] = {0};
+    uint8_t A[N * M];
+    uint8_t B[M * P];
+    uint32_t AB_hw[N * P] = {0};
+    uint32_t AB_sw[N * P] = {0};
     int i, j;
 
-    srand(time(0));
+    srand(0);
 
     for (i = 0; i < N; i++) {
         for (j = 0; j < M; j++) {
@@ -54,11 +54,12 @@ int main() {
     int test_passed = 1;
     for (i = 0; i < N; i++) {
         for (j = 0; j < P; j++) {
-			AB_sw[(i * P) + j] = 0;
-			AB_hw[(i * P) + j] = 0;
             if (AB_sw[i * P + j] != AB_hw[i * P + j]) {
                 test_passed = 0;
                 printf("Mismatch at [%d][%d]: AB_sw = %d, AB_hw = %d\n", i, j, AB_sw[i * P + j], AB_hw[i * P + j]);
+            }
+            else if (AB_sw[i * P + j] == AB_hw[i * P + j]) {
+                printf("At [%d][%d]: AB_sw = %d, AB_hw = %d\n", i, j, AB_sw[i * P + j], AB_hw[i * P + j]);
             }
         }
     }
