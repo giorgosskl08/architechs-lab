@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
-  <source>
-    <originFiles name="MATRIX_MULT.c" path="C:\Users\PX\AppData\Roaming\Xilinx\Vitis\MATRIX_MULT.c"/>
-  </source>
-  <testbench>
-    <originFiles name="tb_MATRIX_MULT.c" path="C:\Users\PX\AppData\Roaming\Xilinx\Vitis\tb_MATRIX_MULT.c"/>
-  </testbench>
-</autopilotfilemapping:AutoPilotFileMapping>

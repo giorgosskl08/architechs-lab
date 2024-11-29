@@ -14,14 +14,16 @@
 #define P (1 << LP)
 
 void matrixMultiplication(uint8_t A[N*M], uint8_t B[M*P], uint32_t AB[N*P]) {
-	#pragma HLS ARRAY_PARTITION variable=A type=cyclic factor=M dim=0
-    #pragma HLS ARRAY_PARTITION variable=B type=cyclic factor=M dim=1
-    #pragma HLS ARRAY_PARTITION variable=AB complete
+	#pragma HLS ARRAY_PARTITION variable=A type=cyclic factor=M
+    #pragma HLS ARRAY_PARTITION variable=B type=cyclic factor=M
+	#pragma HLS ARRAY_PARTITION variable=AB type=cyclic factor=M
 		for (int i = 0; i < N; i++) {
+			#pragma HLS PIPELINE II=1
 			for (int j = 0; j < P; j++) {
 				AB[(i * P) + j] = 0;
-				#pragma HLS UNROLL
+				#pragma HLS PIPELINE II=1
 				for (int k = 0; k < M; k++) {
+				#pragma HLS UNROLL
 					AB[(i * P) + j]  += A[(i * M) + k] * B[(k * P) + j];
 				}
 			}
